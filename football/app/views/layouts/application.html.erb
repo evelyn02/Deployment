@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Football</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="container">
+ <div id="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">Search for a Project </a></li>
+      <li><a href="#">Create a Project</a></li>
+        <li><a href="#">Login or Sign Up </a></li>
+    </ul>
+  </div>
+ <div id="banner"><img src="assets/images/banner.jpg" width="950" height="250" /></div>
+ <div id="content">
+
+<%= yield %>
+  </div>
+</div>
+
+<div id="footer">
+  <p>&copy;Copyright 2013, Evelyn Nomayo
+<ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">How it works</a></li>
+      <li><a href="#">Search for a Project </a></li>
+      <li><a href="#">Create a Project</a></li>
+    </ul>
+    <img src="assets/images/social-media-icons.jpg" alt="" width="250" height="59" border="0" usemap="#Map" />
+    <map name="Map" id="Map">
+      <area shape="rect" coords="6,8,46,44" href="http://www.facebook.com" target="_self" alt="Join out Facebook Network" />
+      <area shape="rect" coords="56,6,95,44" href="http://www.twitter.com" target="_self" alt="Connect with us on twitter!" />
+      <area shape="rect" coords="107,7,146,80" href="http://www.youtube.com" target="_self" alt="Check out our YouTube Videos" />
+      <area shape="rect" coords="159,6,196,45" href="http://www.linkedin.com" target="_self" alt="Join our linkedin Network!" />
+    </map>
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+	background-color: #CDDDEF;
+	margin: 0px;
+	padding: 0px;
+}
+#container {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: medium;
+	background-color: #FFF;
+	height: 900px;
+	width: 950px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#banner {
+	height: 250px;
+	width: 950px;
+}
+#menu {
+	text-align:center;
+	color: #FFF;
+	background-color: #003;
+	height: 40px;
+	padding-left: 120px;
+}
+#menu ul li a {
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+}
+#menu ul li a:hover {
+	color: #39F;
+	text-decoration: underline;
+}
+#footer ul li a:hover {
+	color: #39F;
+	text-decoration: underline;
+}
+
+
+#menu ul {
+	list-style-type: none;
+	padding-top: 10px;
+}
+#footer p ul {
+	float: left;
+	list-style-type: none;
+}
+#footer ul {
+	float: none;
+	list-style-type: none;
+	text-align: center;
+}
+#footer ul li {
+	margin: 20px;
+	float: left;
+	text-align: center;
+}
+#footer ul li a {
+	color: #CCC;
+	text-decoration: none;
+	text-align: center;
+}
+#footer ul li a:visited {
+	color: #CCC;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+#menu ul li {
+	float: left;
+	margin-right: 30px;
+}
+#content {
+	background-color: #EFF4FA;
+	height: 570px;
+	width: 900px;
+	margin-top: 25px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 5px;
+	padding-left: 5px;
+	border: thin solid #E1E1E1;
+}
+#left-content {
+	
+	float: left;
+	height: 500px;
+	width: 550px;
+	margin-top: 20px;
+	margin-left: 17px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	background-color: #FFF;
+}
+
+.topics {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #666;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: dotted;
+	border-top-color: #006;
+	border-right-color: #006;
+	border-bottom-color: #006;
+	border-left-color: #006;
+	font-size: medium;
+	display: block;
+}
+.topic2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: #CCC;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: dotted;
+	border-top-color: #006;
+	border-bottom-color: #006;
+	font-size: medium;
+	line-height: 2em;
+	background-color: #003;
+	border-bottom-style: dotted;
+	padding-left: 5px;
+}
+#right-sidebar {
+	color: #666;
+	float: right;
+	height: 500px;
+	width: 250px;
+	background-color: #FFF;
+	margin: 20px;
+	border: thin solid #E1E1E1;
+	padding: 0px;
+}
+#footer {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #CCC;
+	background-color: #003;
+	text-align: center;
+	clear: both;
+	height: 120px;
+}
+.foterCenter {
+	text-align: center;
+}
