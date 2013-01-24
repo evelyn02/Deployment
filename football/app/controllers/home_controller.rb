@@ -19,7 +19,14 @@ class HomeController < ApplicationController
     url = "http://weather.yahooapis.com/forecastrss?w=" + woeid
     
     require 'open-uri'
-    @scores = open(url) { |f| f.read }
+    file_content = open(url) { |f| f.read }
     
+    # file_content read the xml with ruby
+    
+    @weather = WeatherModel.new()
+    @wearther.low = file_content['content']['item']['yweather']
+    @weather.high = ...
+    ...
+    @weather.save
   end
 end

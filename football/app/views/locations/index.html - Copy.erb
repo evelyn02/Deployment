@@ -1,6 +1,4 @@
-<h3>Type in a CIN location closest to you to get direction </h3>
-OR Get direction to any location <%= link_to 'New Location', new_location_path %>
-
+<h3>Type in a location closest to you to get direction</h3>
 
 
 <%= form_tag locations_path, :method => :get do %>
@@ -28,10 +26,12 @@ OR Get direction to any location <%= link_to 'New Location', new_location_path %
     <td><%= location.latitude %></td>
     <td><%= location.longitude %></td>
     <td><%= link_to 'Show', location %></td>
-    
+    <td><%= link_to 'Edit', edit_location_path(location) %></td>
+    <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
+<%= link_to 'New Location', new_location_path %>

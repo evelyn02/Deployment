@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Football</title>
+  <title>Welcome to MISIP</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,15 +11,31 @@
 <div id="container">
  <div id="menu">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">How it works</a></li>
-      <li><a href="#">Search for a Project </a></li>
-      <li><a href="#">Create a Project</a></li>
-        <li><a href="#">Login or Sign Up </a></li>
+    
+      <li><%= link_to('Home', {:controller=> 'locations', :action=>'index'}) %></li>
+      <li><%= link_to('How it works', {:controller=> 'locations', :action=>'index'}) %></li>
+      <li><%= link_to('Search for a Project', {:controller=> 'locations', :action=>'index'}) %></li>
+      <li><%= link_to('Create a project', {:controller=> 'locations', :action=>'index'}) %></li>
+      <li><%= link_to('Search nearest location', {:controller=> 'locations', :action=>'index'}) %></li>
+      <li><%= link_to('Login or Sign up', {:controller=> 'locations', :action=>'index'}) %></li>
+
     </ul>
   </div>
- <div id="banner"><img src="assets/images/banner.jpg" width="950" height="250" /></div>
+ <div id="banner"><%= image_tag('banner.jpg')%></div>
  <div id="content">
+  <div id="right-sidebar">
+    <img src="assets/images/social-media-icons.jpg" alt="" width="250" height="59" border="0" usemap="#Map" />
+    <map name="Map" id="Map">
+      <area shape="rect" coords="6,2,59,58" href="http://www.facebook.com" target="_top" alt="Join out Facebook Network" />
+      <area shape="rect" coords="68,3,121,56" href="http://www.twitter.com" target="_self" alt="Connect with us on twitter!" />
+      <area shape="rect" coords="131,1,180,73" href="http://www.youtube.com" target="_self" alt="Check out our YouTube Videos" />
+      <area shape="rect" coords="195,4,245,62" href="http://www.linkedin.com" target="_self" alt="Join our linkedin Network!" />
+    </map>   
+  <p  class="topic2" > Sign Up or Login</p>  <iframe width="250" height="141" src="http://www.youtube.com/embed/PeZWoDJnR5Q" frameborder="0" allowfullscreen></iframe>
+
+<p><iframe width="250" height="188" src="http://www.youtube.com/embed/QDVECWcYtjc" frameborder="0" allowfullscreen></iframe></p>
+  </div>
+  
 
 <%= yield %>
   </div>

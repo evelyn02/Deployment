@@ -1,14 +1,17 @@
 class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
-  def index
-    @locations = Location.all
+  
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @locations }
-    end
+def index
+  if params[:search].present?
+    @locations = Location.near(params[:search], 50, :order => :distance)
+  else
+    @locations = Location.all
   end
+end
+
+
 
   # GET /locations/1
   # GET /locations/1.json
