@@ -11,8 +11,6 @@ def index
   end
 end
 
-
-
   # GET /locations/1
   # GET /locations/1.json
   def show
@@ -27,6 +25,9 @@ end
   # GET /locations/new
   # GET /locations/new.json
   def new
+    redirect_to :action =>'index', notice: 'What are you triing to do.'
+    return
+  
     @location = Location.new
 
     respond_to do |format|
@@ -43,6 +44,9 @@ end
   # POST /locations
   # POST /locations.json
   def create
+    redirect_to :action => 'index', notice: 'What are you triing to do.'
+    return
+  
     @location = Location.new(params[:location])
 
     respond_to do |format|

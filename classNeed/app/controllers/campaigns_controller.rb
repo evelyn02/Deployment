@@ -1,3 +1,5 @@
+require 'clickatell'
+
 class CampaignsController < ApplicationController
   # GET /campaigns
   # GET /campaigns.json
@@ -44,6 +46,10 @@ class CampaignsController < ApplicationController
 
     respond_to do |format|
       if @campaign.save
+        
+        api = Clickatell::API.authenticate('3409342', 'evelyn02', 'Na57jrZF')
+        api.send_message('353879190131', @campaign.sms_body)
+        
         format.html { redirect_to @campaign, notice: 'Campaign was successfully created.' }
         format.json { render json: @campaign, status: :created, location: @campaign }
       else

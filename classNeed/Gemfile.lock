@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    clickatell (0.8.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -107,6 +108,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  clickatell
   coffee-rails (~> 3.2.1)
   geocoder (= 1.1.6)
   geokit (= 1.6.5)
