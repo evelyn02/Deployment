@@ -1,0 +1,25 @@
+<%= form_for(@class_need) do |f| %>
+  <% if @class_need.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@class_need.errors.count, "error") %> prohibited this class_need from being saved:</h2>
+
+      <ul>
+      <% @class_need.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contacts_url %><br />
+    <%= f.text_field :contacts_url %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

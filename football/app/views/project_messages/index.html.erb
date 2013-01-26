@@ -1,0 +1,29 @@
+<h1>Listing project_messages</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Sms body</th>
+    <th>Email body</th>
+    <th>Fax body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @project_messages.each do |project_message| %>
+  <tr>
+    <td><%= project_message.title %></td>
+    <td><%= project_message.sms_body %></td>
+    <td><%= project_message.email_body %></td>
+    <td><%= project_message.fax_body %></td>
+    <td><%= link_to 'Show', project_message %></td>
+    <td><%= link_to 'Edit', edit_project_message_path(project_message) %></td>
+    <td><%= link_to 'Destroy', project_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Project message', new_project_message_path %>

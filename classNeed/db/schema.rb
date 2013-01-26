@@ -11,14 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130124060946) do
+ActiveRecord::Schema.define(:version => 20130124101446) do
+
+  create_table "campaigns", :force => true do |t|
+    t.string   "title"
+    t.string   "string"
+    t.string   "sms_body"
+    t.string   "email_body"
+    t.string   "fax_body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "class_needs", :force => true do |t|
-    t.integer  "project_message_id"
+    t.integer  "message_template_id"
     t.string   "contacts_url"
     t.string   "status",              :default => "pending"
     t.datetime "created_at",                                 :null => false
     t.datetime "updated_at",                                 :null => false
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "title"
+    t.string   "string"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "locations", :force => true do |t|
@@ -29,15 +48,32 @@ ActiveRecord::Schema.define(:version => 20130124060946) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "projects_messages", :force => true do |t|
-    t.string   "title"
+  create_table "members", :force => true do |t|
+    t.string   "first_name"
+    t.string   "string"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "needs", :force => true do |t|
+    t.integer  "campaign_id"
+    t.string   "contacts_url"
+    t.string   "status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
     t.text     "sms_body",   :limit => 160
     t.text     "email_body"
     t.text     "fax_body"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
   end
-
 
   create_table "users", :force => true do |t|
     t.string   "first_Name", :limit => 25

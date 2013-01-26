@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @campaign.title %>
+</p>
+
+<p>
+  <b>Sms body:</b>
+  <%= @campaign.sms_body %>
+</p>
+
+<p>
+  <b>Email body:</b>
+  <%= @campaign.email_body %>
+</p>
+
+<p>
+  <b>Fax body:</b>
+  <%= @campaign.fax_body %>
+</p>
+
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@need) do |f| %>
+  <% if @need.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@need.errors.count, "error") %> prohibited this need from being saved:</h2>
+
+      <ul>
+      <% @need.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 
+<p><label for="need">Message Template</label><br/>
+<%= select('need','campaign_id', Campaign.find(:all).collect {|t| [ t.title, t.id ] })%></p>
+<p><label for="need_contacts_url">Contacts url</label><br/>
+<%= text_field 'need', 'contacts_url', :size => 100 %></p>
+
+
+  <div class="field">
+    <%= f.label :contacts_url %><br />
+    <%= f.text_field :contacts_url %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

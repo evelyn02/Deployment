@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @project_message.title %>
+</p>
+
+<p>
+  <b>Sms body:</b>
+  <%= @project_message.sms_body %>
+</p>
+
+<p>
+  <b>Email body:</b>
+  <%= @project_message.email_body %>
+</p>
+
+<p>
+  <b>Fax body:</b>
+  <%= @project_message.fax_body %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_message_path(@project_message) %> |
+<%= link_to 'Back', project_messages_path %>

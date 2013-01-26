@@ -1,4 +1,16 @@
 Football::Application.routes.draw do
+  resources :contacts
+
+
+  resources :campaigns
+
+
+  resources :members
+
+
+  resources :needs
+
+
   resources :class_needs
 
 
