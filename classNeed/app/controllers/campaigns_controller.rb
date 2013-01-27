@@ -50,6 +50,11 @@ class CampaignsController < ApplicationController
         api = Clickatell::API.authenticate('3409342', 'evelyn02', 'Na57jrZF')
         api.send_message('353879190131', @campaign.sms_body)
         
+        open('url')
+        
+       
+        
+        
         format.html { redirect_to @campaign, notice: 'Campaign was successfully created.' }
         format.json { render json: @campaign, status: :created, location: @campaign }
       else

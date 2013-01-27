@@ -34,4 +34,12 @@ Football::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+
+config.action_mailer.smtp_settings = {
+  :address   => "smtp.mandrillapp.com",
+  :port      => 587,
+  :user_name => ENV["enomayo@gmail.com"],
+  :password  => ENV["i6Nqwz0_9JGZCqGj-TO55w"]
+}
 end
